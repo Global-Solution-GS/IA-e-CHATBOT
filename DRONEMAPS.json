@@ -1,0 +1,785 @@
+{
+  "intents": [
+    {
+      "intent": "apresentacao",
+      "examples": [
+        {
+          "text": "Boa noite"
+        },
+        {
+          "text": "Boa tarde"
+        },
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "Estou falando com o chatbot?"
+        },
+        {
+          "text": "Me apresente o assistente."
+        },
+        {
+          "text": "Me diga quem você é."
+        },
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "oi chat"
+        },
+        {
+          "text": "olá"
+        },
+        {
+          "text": "Ola tudo bem"
+        },
+        {
+          "text": "O que a DRONEMAPS oferece?"
+        },
+        {
+          "text": "O que você faz?"
+        },
+        {
+          "text": "Sou bombeiro, posso usar a API?"
+        },
+        {
+          "text": "/start"
+        },
+        {
+          "text": "Você é um robô?"
+        },
+        {
+          "text": "voce pode me ajudar?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "causa_natural",
+      "examples": [
+        {
+          "text": "2"
+        },
+        {
+          "text": "2."
+        },
+        {
+          "text": "A IA sabe se há risco?"
+        },
+        {
+          "text": "Analisar Causa Natural"
+        },
+        {
+          "text": "analise a causa natural"
+        },
+        {
+          "text": "Como ele analisa o desastre?"
+        },
+        {
+          "text": "Como ele sabe que foi incêndio?"
+        },
+        {
+          "text": "Como funciona a análise da origem?"
+        },
+        {
+          "text": "Como o sistema detecta a causa do desastre?"
+        },
+        {
+          "text": "Ele detecta vento forte?"
+        },
+        {
+          "text": "Ele identifica fogo ou enchente?"
+        },
+        {
+          "text": "É natural ou provocado?"
+        },
+        {
+          "text": "O drone sabe se foi deslizamento?"
+        },
+        {
+          "text": "O sistema mostra o tipo de desastre?"
+        },
+        {
+          "text": "Qual sensor identifica a causa?"
+        },
+        {
+          "text": "Que tipo de desastre ele reconhece?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "info_planos",
+      "examples": [
+        {
+          "text": "5"
+        },
+        {
+          "text": "5."
+        },
+        {
+          "text": "Como faço upgrade?"
+        },
+        {
+          "text": "Existe versão gratuita?"
+        },
+        {
+          "text": "Informações sobre os planos"
+        },
+        {
+          "text": "O plano avançado tem suporte?"
+        },
+        {
+          "text": "O que o plano básico oferece?"
+        },
+        {
+          "text": "Quais os recursos do plano profissional?"
+        },
+        {
+          "text": "Quais são os planos da DRONEMAPS?"
+        },
+        {
+          "text": "Quanto custa a API?"
+        },
+        {
+          "text": "Quero saber os valores"
+        },
+        {
+          "text": "Tem desconto para ONGs?"
+        },
+        {
+          "text": "Tem plano com integração completa?"
+        },
+        {
+          "text": "Tem plano para bombeiros?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "mapeamento",
+      "examples": [
+        {
+          "text": "1"
+        },
+        {
+          "text": "A tecnologia de mapeamento é por GPS?"
+        },
+        {
+          "text": "Como as rotas seguras são definidas?"
+        },
+        {
+          "text": "como funciona o mapeamento"
+        },
+        {
+          "text": "Como funciona o mapeamento da DRONEMAPS?"
+        },
+        {
+          "text": "mapeamento"
+        },
+        {
+          "text": "Me explica como fazem o rastreamento da área"
+        },
+        {
+          "text": "me mostra o mapeamento"
+        },
+        {
+          "text": "O drone sobrevoa toda a região?"
+        },
+        {
+          "text": "O mapa mostra todos os riscos?"
+        },
+        {
+          "text": "O mapeamento é em tempo real?"
+        },
+        {
+          "text": "O que vocês usam para mapear?"
+        },
+        {
+          "text": "Usam satélite ou drone?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "suporte",
+      "examples": [
+        {
+          "text": "4"
+        },
+        {
+          "text": "4."
+        },
+        {
+          "text": "Como entro em contato com o suporte?"
+        },
+        {
+          "text": "Como envio uma requisição corretamente?"
+        },
+        {
+          "text": "Como faço autenticação na API?"
+        },
+        {
+          "text": "Como funciona a API da DRONEMAPS?"
+        },
+        {
+          "text": "Como integro a API ao meu sistema?"
+        },
+        {
+          "text": "Está dando erro na chamada da API, o que faço?"
+        },
+        {
+          "text": "Existe ambiente de testes da API?"
+        },
+        {
+          "text": "mostre o suporte"
+        },
+        {
+          "text": "Onde posso encontrar a documentação da API?"
+        },
+        {
+          "text": "O que significa o erro 404 que apareceu?"
+        },
+        {
+          "text": "Posso usar a API em tempo real?"
+        },
+        {
+          "text": "Quais formatos a API suporta?"
+        },
+        {
+          "text": "suporte"
+        },
+        {
+          "text": "suporte tecnico"
+        },
+        {
+          "text": "Tem suporte técnico disponível?"
+        },
+        {
+          "text": "tirar duvidas"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "visao_termica",
+      "examples": [
+        {
+          "text": "3"
+        },
+        {
+          "text": "3."
+        },
+        {
+          "text": "A imagem térmica aparece no mapa?"
+        },
+        {
+          "text": "A visão térmica ajuda no resgate?"
+        },
+        {
+          "text": "Como ativar a visão térmica?"
+        },
+        {
+          "text": "Como funciona a visão térmica?"
+        },
+        {
+          "text": "Como o drone encontra vítimas?"
+        },
+        {
+          "text": "Como sei que alguém está ali?"
+        },
+        {
+          "text": "Ele detecta pessoas com calor?"
+        },
+        {
+          "text": "Ele mostra onde há vida?"
+        },
+        {
+          "text": "Ele usa sensores de calor?"
+        },
+        {
+          "text": "Ele vê por cima de escombros?"
+        },
+        {
+          "text": "imagem termica"
+        },
+        {
+          "text": "Isso funciona de noite?"
+        },
+        {
+          "text": "O que a câmera térmica vê?"
+        },
+        {
+          "text": "visão termica"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "voltar_menu",
+      "examples": [
+        {
+          "text": "Como volto para o menu?"
+        },
+        {
+          "text": "Me leva para o começo"
+        },
+        {
+          "text": "Me mostra o menu de novo"
+        },
+        {
+          "text": "Menu, por favor"
+        },
+        {
+          "text": "Menu principal"
+        },
+        {
+          "text": "Mostre o menu"
+        },
+        {
+          "text": "Pode exibir as opções novamente?"
+        },
+        {
+          "text": "Pode mostrar o menu inicial?"
+        },
+        {
+          "text": "Quero as opções de novo"
+        },
+        {
+          "text": "Quero voltar ao menu"
+        },
+        {
+          "text": "Retornar ao menu principal"
+        },
+        {
+          "text": "Voltar para o início"
+        },
+        {
+          "text": "voltar para o menu"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "causa",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "fogo",
+          "synonyms": [
+            "deslizamento",
+            "enchente",
+            "incendio",
+            "vento forte"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "não",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "não",
+          "synonyms": [
+            "agora não",
+            "hoje não",
+            "nao",
+            "nao mostre",
+            "nn"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "planos",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "plano gratuito",
+          "synonyms": [
+            "avançado",
+            "básico",
+            "plano pago",
+            "profissional"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "regiao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "zona norte",
+          "synonyms": [
+            "area afetada",
+            "centro",
+            "local do acidente",
+            "zona leste"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sim",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "sim",
+          "synonyms": [
+            "claro",
+            "desejo",
+            "gostaria",
+            "pode mostrar",
+            "quero ver",
+            "uhum",
+            "yes"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "suporte",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "comercial",
+          "synonyms": [
+            "contrato",
+            "dúvidas sobre planos",
+            "renovação",
+            "upgrade"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "financeiro",
+          "synonyms": [
+            "boleto",
+            "cobrança",
+            "fatura",
+            " pagamento"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "operacional",
+          "synonyms": [
+            "funcionamento",
+            "treinamento",
+            "uso do sistema"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "técnico",
+          "synonyms": [
+            "bug",
+            " erro",
+            "falha",
+            " problema técnico"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "visão",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "termica",
+          "synonyms": [
+            "calor termica",
+            "imagem térmica",
+            "sensor termico"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Apresentação",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Tudo bem com você?\nSou o assistente virtual da DRONEMAPS e estou aqui para tirar suas dúvidas e explicar com clareza tudo o que você precisar.\nDeseja ver o nosso menu de opções?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome || #apresentacao",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Desculpe, não entendi sua mensagem. Você pode reformular ou me perguntar algo diferente?\nCaso queira voltar para o menu, escreva \"Voltar para o menu\""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_5_1748437148216",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Capturar user.NÃO",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, não irei mostrar o menu. Para eu atendê-lo melhor, poderia me informar seu nome?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "context": {
+        "nome": "",
+        "coletando_nome": true
+      },
+      "conditions": "@não",
+      "dialog_node": "node_1_1748439397627",
+      "previous_sibling": "node_5_1748353052641"
+    },
+    {
+      "type": "standard",
+      "title": "Mapeamento",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Como funciona o mapeamento da DRONEMAPS?\nA DRONEMAPS fornece mapeamento inteligente de áreas afetadas por desastres, especialmente desenvolvida para equipes de resgate, bombeiros e defesa civil.\n\nNosso sistema integra fontes de dados externas como imagens de satélite, sensores climáticos, históricos de desastres e geolocalização, processados com Inteligência Artificial para gerar mapas interativos e atualizados em tempo real.\n\nEsses mapas informam:\nLocalização exata das regiões afetadas;\nIdentificação de riscos como fogo, enchentes e deslizamentos;\nSugestões de rotas seguras para acesso das equipes;\nAnálise térmica de regiões com possível presença de pessoas;\n Monitoramento contínuo com alertas automáticos por região.\n\nAtravés da DRONEMAPS, as equipes podem acessar essas informações diretamente em seus sistemas, plataformas web ou aplicativos móveis otimizando tempo, segurança e tomada de decisão em missões de resgate.\n$nome Caso queira voltar para o menu, escreva \"Voltar para o menu\""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#mapeamento || @regiao",
+      "dialog_node": "node_2_1748435539218",
+      "previous_sibling": "node_2_1748437328632"
+    },
+    {
+      "type": "standard",
+      "title": "Analisar Causa Natural",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Analisar Causa Natural\nA funcionalidade “Analisar Causa Natural” da DRONEMAPS utiliza inteligência artificial combinada com dados meteorológicos e geográficos em tempo real para identificar a provável causa de um desastre em determinada região.\n\nCom base nas informações coletadas por sensores integrados e satélites parceiros, a API avalia sinais característicos de eventos como:\nEnchentes: Detecção de acúmulo anormal de água, aumento repentino no nível de rios e chuvas intensas recentes.\nIncêndios: Identificação de pontos de calor por imagens térmicas, além de análise de fumaça e temperatura ambiente.\nVentos fortes ou tempestades: Cruzamento de dados de pressão atmosférica, velocidade dos ventos e registros de queda de energia ou árvores.\nDeslizamentos: Reconhecimento de alterações topográficas e deslocamento de massa do solo.\n\nCom isso, a equipe de resgate recebe um relatório automatizado com a causa mais provável, facilitando decisões rápidas e estratégicas durante emergências. Essa análise é fundamental para priorizar áreas críticas, avaliar riscos secundários e otimizar o envio de recursos ao local afetado.\n$nome Caso queira voltar para o menu, escreva \"Voltar para o menu\"."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#causa_natural || @causa",
+      "dialog_node": "node_2_1748437328632",
+      "previous_sibling": "node_3_1748437481796"
+    },
+    {
+      "type": "standard",
+      "title": "Visão Térmica",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Visão Térmica\nA visão térmica é uma tecnologia que permite detectar a radiação infravermelha emitida por corpos e superfícies, transformando essa radiação em imagens visuais que representam as variações de temperatura. Isso é especialmente útil em operações de resgate, pois permite identificar pessoas ou animais em ambientes com pouca ou nenhuma visibilidade, como em fumaça densa, escuridão total ou áreas cobertas por vegetação.\n\nNo contexto do DRONEMAPS, a visão térmica é integrada aos drones para fornecer um mapeamento preciso e em tempo real das áreas afetadas, facilitando a localização de vítimas e ajudando a equipe de resgate a agir rapidamente e com maior segurança.\n\nCom essa tecnologia, é possível:\nDetectar pontos quentes, como focos de incêndio.\nIdentificar a presença de pessoas mesmo em locais escondidos ou inacessíveis.\nMonitorar mudanças de temperatura que indicam riscos ou situações emergenciais.\n\nCaso queira voltar para o menu, escreva \"Voltar para o menu\"."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#visao_termica || @visão",
+      "dialog_node": "node_3_1748437481796",
+      "previous_sibling": "node_3_1748437505779"
+    },
+    {
+      "type": "standard",
+      "title": "Suporte Técnico",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Contato Suporte DRONEMAPS\n$nome Se você está enfrentando algum problema, dúvida ou precisa de ajuda com nossos serviços, estamos aqui para ajudar!\n\nWhatsApp: 11 97314-124\nE-mail: suporte@dronemaps.com\nTelefone: (11) 4002-8922\n\nNo nosso site, você também pode enviar suas dúvidas pelo formulário de contato.\nEstamos prontos para ajudar!\nCaso queira voltar para o menu, escreva \"Voltar para o menu\"."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#suporte || @suporte",
+      "dialog_node": "node_3_1748437505779",
+      "previous_sibling": "node_3_1748437515403"
+    },
+    {
+      "type": "standard",
+      "title": "Informações sobre Planos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informações sobre Planos\n$nome Atualmente, oferecemos apenas 1 opção de plano:\n\nDRONEMAPS+\nMensal: R$ 799,99\nTrimestral: R$ 2.099,99 (equivalente a R$ 699,99/mês, com desconto)\nVitalício: R$ 7.999,99 (pagamento único, ideal para uso prolongado)\n\nCaso queira voltar para o menu, escreva \"Voltar para o menu\"."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#info_planos || @planos",
+      "dialog_node": "node_3_1748437515403",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Save user && Menu",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Menu de Opções - DRONEMAPS\n$nome Escolha uma das opções abaixo para continuar:\n\n1. Mapeamento – Acesso a uma câmera com IA integrada para atualização em tempo real de áreas afetadas, rotas seguras e zonas de risco.\n2.  Analisar Causa Natural – Descubra se foi fogo, vento ou enchente.\n3.  Ativar Visão Térmica – Auxilie nas buscas com imagens térmicas.\n4.  Suporte Técnico – Tire dúvidas sobre o uso da API.\n5.  Informações sobre Planos – Conheça os recursos e preços da DRONEMAPS.\n\nDigite o número ou nome da opção desejada. Estou pronto para ajudar!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1748353052641",
+      "context": {
+        "nome": "<?input.text?>"
+      },
+      "conditions": "@sim || true",
+      "dialog_node": "node_4_1748353394842"
+    },
+    {
+      "type": "standard",
+      "title": "Capturar user.SIM",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Para eu atendê-lo melhor, poderia me informar seu nome?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "context": {
+        "nome": "",
+        "coletando_nome": true
+      },
+      "conditions": "@sim",
+      "dialog_node": "node_5_1748353052641"
+    },
+    {
+      "type": "standard",
+      "title": "Capturar NÃO.",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Como posso ajudá-lo $nome?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1748439397627",
+      "context": {
+        "nome": "<?input.text?>"
+      },
+      "conditions": "@não || true",
+      "dialog_node": "node_5_1748353391916"
+    },
+    {
+      "type": "standard",
+      "title": "Back to Menu",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1748353394842"
+      },
+      "conditions": "#voltar_menu",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_5_1748437148216",
+      "previous_sibling": "node_2_1748435539218"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores",
+      "use_connect_to_support_prompt": "Connect to support",
+      "single_answer_clarification_prompt": "Something else"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "",
+  "name": "DRONEMAPS"
+}
