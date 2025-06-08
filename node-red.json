@@ -1,0 +1,595 @@
+[
+    {
+        "id": "847990a0172d87cd",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9b3f57234346c07c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1e7984be4ec4a656",
+        "type": "telegram bot",
+        "botname": "Hydra",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "c1a2d0f8d0189bdf",
+        "type": "telegram receiver",
+        "z": "9b3f57234346c07c",
+        "name": "",
+        "bot": "1e7984be4ec4a656",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "495634128e08d61a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bae35454bda2b8ef",
+        "type": "watson-assistant-v2",
+        "z": "9b3f57234346c07c",
+        "name": "HC Assistant",
+        "service-endpoint": "https://api.au-syd.assistant.watson.cloud.ibm.com/instances/68bf1d3e-747a-4cec-a070-f0384555e427",
+        "assistant_id": "2cd61aa9-e3d2-4159-8296-a0aaa12b5864",
+        "debug": false,
+        "restart": false,
+        "return_context": true,
+        "alternate_intents": false,
+        "multisession": true,
+        "timeout": "",
+        "optout-learning": false,
+        "persist-session-id": false,
+        "x": 810,
+        "y": 200,
+        "wires": [
+            [
+                "23f632b6f34d66b0"
+            ]
+        ]
+    },
+    {
+        "id": "6ba3acfce458d0c7",
+        "type": "debug",
+        "z": "9b3f57234346c07c",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "91b5b0f1389643db",
+        "type": "telegram sender",
+        "z": "9b3f57234346c07c",
+        "name": "7539956652:AAHlezQOw3TIfO5srKgm995I_kPtv4EsUa4",
+        "bot": "1e7984be4ec4a656",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1410,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "27e3a493950a249b",
+        "type": "change",
+        "z": "9b3f57234346c07c",
+        "name": "Preparar saida",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.chatId",
+                "pt": "msg",
+                "to": "chatId",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.type",
+                "pt": "msg",
+                "to": "message",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.content",
+                "pt": "msg",
+                "to": "payload.output.generic[0].text",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 160,
+        "wires": [
+            [
+                "91b5b0f1389643db"
+            ]
+        ]
+    },
+    {
+        "id": "495634128e08d61a",
+        "type": "switch",
+        "z": "9b3f57234346c07c",
+        "name": "switch",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "message",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "animation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "photo",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "voice",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sticker",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 290,
+        "y": 320,
+        "wires": [
+            [
+                "c49ca4ff43fb796a",
+                "9193bc5d0323f8e2"
+            ],
+            [
+                "a4fb141c04a1d77b"
+            ],
+            [
+                "ddec781196357e4d"
+            ],
+            [
+                "09590b05e883b825",
+                "275ab76817e414c4"
+            ],
+            [
+                "121cacc355e6e52a"
+            ]
+        ]
+    },
+    {
+        "id": "c49ca4ff43fb796a",
+        "type": "change",
+        "z": "9b3f57234346c07c",
+        "name": "Preparar entrada",
+        "rules": [
+            {
+                "t": "set",
+                "p": "params.session_id",
+                "pt": "msg",
+                "to": "payload.chatId",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "chatId",
+                "pt": "msg",
+                "to": "payload.chatId",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.content",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [
+                "bae35454bda2b8ef"
+            ]
+        ]
+    },
+    {
+        "id": "9193bc5d0323f8e2",
+        "type": "debug",
+        "z": "9b3f57234346c07c",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "efe1353af6a57e35",
+        "type": "watson-speech-to-text",
+        "z": "9b3f57234346c07c",
+        "name": "",
+        "alternatives": 1,
+        "speakerlabels": false,
+        "smartformatting": false,
+        "lang": "pt-BR",
+        "langhidden": "pt-BR",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "",
+        "custom-weight": "0.5",
+        "band": "BroadbandModel",
+        "bandhidden": "",
+        "keywords": "",
+        "keywords-threshold": "0.5",
+        "word-confidence": false,
+        "password": "",
+        "apikey": "DQIvG6-fA_iTAMStBwCowiU5cZuNYz1-KeKn9_1uY8Jz",
+        "payload-response": true,
+        "streaming-mode": false,
+        "streaming-mute": true,
+        "auto-connect": false,
+        "discard-listening": false,
+        "disable-precheck": false,
+        "service-endpoint": "https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/31cb373c-a75a-449c-8f3f-a969d4faad72",
+        "x": 540,
+        "y": 720,
+        "wires": [
+            [
+                "9fbf82f2b1de2e17",
+                "699e0123941147be"
+            ]
+        ]
+    },
+    {
+        "id": "9fbf82f2b1de2e17",
+        "type": "watson-assistant-v2",
+        "z": "9b3f57234346c07c",
+        "name": "HC Assistant",
+        "service-endpoint": "https://api.au-syd.assistant.watson.cloud.ibm.com/instances/68bf1d3e-747a-4cec-a070-f0384555e427",
+        "assistant_id": "2cd61aa9-e3d2-4159-8296-a0aaa12b5864",
+        "debug": false,
+        "restart": false,
+        "return_context": true,
+        "alternate_intents": false,
+        "multisession": true,
+        "timeout": "",
+        "optout-learning": false,
+        "persist-session-id": false,
+        "x": 730,
+        "y": 800,
+        "wires": [
+            [
+                "824e13e9a12613ef",
+                "5a4417294711c32d"
+            ]
+        ]
+    },
+    {
+        "id": "9ac1b48bb0707279",
+        "type": "watson-text-to-speech",
+        "z": "9b3f57234346c07c",
+        "name": "",
+        "lang": "pt-BR",
+        "langhidden": "pt-BR",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "",
+        "voice": "pt-BR_IsabelaVoice",
+        "voicehidden": "",
+        "format": "audio/wav",
+        "password": "",
+        "apikey": "OyXYTQp94DNjvQmcuqVNDxRiX_rJm4YSccmNpYGsC9e6",
+        "payload-response": false,
+        "service-endpoint": "https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/27672740-3a4a-4e1d-82f6-893cd48a3de8",
+        "x": 1160,
+        "y": 680,
+        "wires": [
+            [
+                "3cc68fec1a741af1",
+                "66852384b031973a"
+            ]
+        ]
+    },
+    {
+        "id": "09590b05e883b825",
+        "type": "function",
+        "z": "9b3f57234346c07c",
+        "name": "Transformar",
+        "func": "msg.params = {\n    chatId: msg.payload.chatId,\n    type: msg.payload.type\n}\nmsg.payload = msg.payload.weblink;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 680,
+        "wires": [
+            [
+                "efe1353af6a57e35"
+            ]
+        ]
+    },
+    {
+        "id": "824e13e9a12613ef",
+        "type": "function",
+        "z": "9b3f57234346c07c",
+        "name": "Transformar",
+        "func": "msg.payload = msg.payload.output.generic[0].text;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 740,
+        "wires": [
+            [
+                "9ac1b48bb0707279",
+                "e11067fee24c6908"
+            ]
+        ]
+    },
+    {
+        "id": "3cc68fec1a741af1",
+        "type": "function",
+        "z": "9b3f57234346c07c",
+        "name": "Saida",
+        "func": "msg.payload = {\n    chatId: msg.params.chatId,\n    type: \"voice\",\n    content: msg.speech\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 580,
+        "wires": [
+            [
+                "91b5b0f1389643db",
+                "1c8643cb7a6db1cf"
+            ]
+        ]
+    },
+    {
+        "id": "275ab76817e414c4",
+        "type": "debug",
+        "z": "9b3f57234346c07c",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "699e0123941147be",
+        "type": "debug",
+        "z": "9b3f57234346c07c",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "5a4417294711c32d",
+        "type": "debug",
+        "z": "9b3f57234346c07c",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e11067fee24c6908",
+        "type": "debug",
+        "z": "9b3f57234346c07c",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "66852384b031973a",
+        "type": "debug",
+        "z": "9b3f57234346c07c",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1460,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "1c8643cb7a6db1cf",
+        "type": "debug",
+        "z": "9b3f57234346c07c",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "ddec781196357e4d",
+        "type": "function",
+        "z": "9b3f57234346c07c",
+        "name": "Entrada foto",
+        "func": "msg.payload = {\n    chatId: msg.payload.chatId,\n    type: \"message\",\n    content: \"Desculpe, meus criadores ainda não me ensinaram a ver imagens. 😊\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 460,
+        "wires": [
+            [
+                "91b5b0f1389643db"
+            ]
+        ]
+    },
+    {
+        "id": "a4fb141c04a1d77b",
+        "type": "function",
+        "z": "9b3f57234346c07c",
+        "name": "Entrada GIF",
+        "func": "msg.payload = {\n    chatId: msg.payload.chatId,\n    type: \"message\",\n    content: \"Ainda não aprendi o humor dos humanos. 😅\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 320,
+        "wires": [
+            [
+                "91b5b0f1389643db"
+            ]
+        ]
+    },
+    {
+        "id": "121cacc355e6e52a",
+        "type": "function",
+        "z": "9b3f57234346c07c",
+        "name": "Entrada Sticker",
+        "func": "msg.payload = {\n    chatId: msg.payload.chatId,\n    type: \"message\",\n    content: \"Ainda não sei reconhecer um sticker.\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 380,
+        "wires": [
+            [
+                "91b5b0f1389643db"
+            ]
+        ]
+    },
+    {
+        "id": "23f632b6f34d66b0",
+        "type": "function",
+        "z": "9b3f57234346c07c",
+        "name": "function 1",
+        "func": "msg.params = msg.params || {};\nmsg.params.session_id = flow.get(\"session_id\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 140,
+        "wires": [
+            [
+                "6ba3acfce458d0c7",
+                "27e3a493950a249b"
+            ]
+        ]
+    }
+]

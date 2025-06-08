@@ -1,0 +1,3 @@
+API KEY: t1u53-bNqHg3eBWn0Bon55CVlvcJ3KTiCnX7rdWcMXwo
+ID: 192356b2-c9f1-4f56-83d7-39cca1a788a4
+URL: https://api.au-syd.assistant.watson.cloud.ibm.com/instances/68bf1d3e-747a-4cec-a070-f0384555e427
